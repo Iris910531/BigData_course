@@ -116,6 +116,9 @@ process_file <- function(file_path, file_name, lower_bound, upper_bound, min_len
   }
   # Use reticulate to call Python function
   source_python("python/module.py")
+  # Absolute Path
+  #source_python("/path/to/your/python/module.py")
+  
   result <- input_data(prepro_done, position, model_path, file_name)
   p_message <<- c(p_message, result[[1]])
   pie_count <<- c(pie_count, result[[2]])
@@ -194,6 +197,11 @@ server <- function(input, output) {
                                                                       "python/trained_models/Yb_model_20.joblib", "Yb")
         )
       })
+      # Absolute Path
+      # "/path/to/your/python/trained_models/Xa_model_24.joblib"
+      # "/path/to/your/python/trained_models/Xb_model_20.joblib"
+      # "/path/to/your/python/trained_models/Ya_model_4.joblib"
+      # "/path/to/your/python/trained_models/Yb_model_20.joblib"
       
       # Define color map
       color_map <- c("Data Error" = "#272727", "65" = "#EE6363", "80" = "#76EE00", "95" = "#FFD700", "130" = "#CE0000", "220" = "#EE6363", "260" = "#76EE00", "300" = "#FFD700", "380" = "#CE0000")

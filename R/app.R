@@ -115,7 +115,10 @@ process_file <- function(file_path, file_name, lower_bound, upper_bound, min_len
     return(NULL)
   }
   # 使用 reticulate 來調用 Python 函數
+  
   source_python("python/module.py")
+  # 絕對路徑可以使用下面這行
+  #source_python("/path/to/your/python/module.py")
   result <- input_data(prepro_done, position, model_path, file_name)
   p_message <<- c(p_message, result[[1]])
   pie_count <<- c(pie_count, result[[2]])
@@ -184,7 +187,7 @@ server <- function(input, output) {
         file_path <- file$datapath
         file_name <- file$name
         par(mfrow = c(1, 2))
-        
+
         switch(input$option,
                "水平作動下馬達側(Xa)" = process_file(file_path, file_name, -0.2, 0.1, 1000, 
                                              "/python/trained_models/Xa_model_24.joblib", "Xa"),
@@ -196,6 +199,11 @@ server <- function(input, output) {
                                              "/python/trained_models/Yb_model_20.joblib", "Yb")
         )
       })
+      # 絕對路徑可以使用下面這行
+      # "/path/to/your/python/trained_models/Xa_model_24.joblib"
+      # "/path/to/your/python/trained_models/Xb_model_20.joblib"
+      # "/path/to/your/python/trained_models/Ya_model_4.joblib"
+      # "/path/to/your/python/trained_models/Yb_model_20.joblib"
       
       # 定義顏色對應表
       color_map <- c("資料異常" = "#272727", "65" = "#EE6363", "80" = "#76EE00", "95" = "#FFD700", "130" = "#CE0000", "220" = "#EE6363", "260" = "#76EE00", "300" = "#FFD700", "380" = "#CE0000")

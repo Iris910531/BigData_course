@@ -13,7 +13,7 @@ The data is provided by a professor and is confidential, so the dataset will not
 ## Tools and statistical methods Used
 
 - **R language**:
-- - **Python**: 
+- **Python**: 
 - **statistical methods**:
 1. Exploratory Data Analysis(EDA): Visualized the data, Descriptive statistics, Detected outliers
 2. Data Preprocessing: Removed outliers,  Fast Fourier Transform(FFT), Feature Engineering, Principal Component Analysis(PCA)
@@ -33,7 +33,6 @@ BigData_course/
 │   └── requirements.R
 ├── python/                # Folder containing Python code files.
 │   ├── module.py
-│   ├── requirements.txt
 │   └── trained_models/
 │       ├── Xa_model_24.joblib
 │       ├── Xb_model_20.joblib
@@ -69,13 +68,13 @@ BigData_course/
 
 ## Setting up the Environment
 
-1. Clone the repository:
+1. Clone the repository(you may need to install git at first):
     ```bash
     git clone https://github.com/Iris910531/BigData_course.git
     cd BigData_course
     ```
 
-2. Create the Conda environment:
+2. Create the Conda environment(you may need to install conda at first):
     ```bash
     conda env create -f environment.yml
     ```
@@ -85,22 +84,26 @@ BigData_course/
     conda activate bigdata
     ```
 
-4. Install additional Python dependencies(Optional):
-    ```bash
-    pip install -r python/requirements.txt
-    ```
-
-5. Install the required R packages:
+4. Install the required R packages:
     ```r
     # In your R session
     source("requirements.R")
     ```
-6. Run the Shiny app:
+5. Run the Shiny app:
     ```r
     # In your R session
     source("R/app.R")
     # you can also use app_en depends on the language you want
     ```
+## Notes
+
+If you encounter error messages in Step 4, please change the file paths to absolute paths.
+If you encounter error messages in Step 5, please open the file `R/app.R` directly and replace the following paths with their absolute paths before running the file:
+- `source_python("python/module.py")`
+- `"/python/trained_models/Xa_model_24.joblib"`
+- `"/python/trained_models/Xb_model_20.joblib"`
+- `"/python/trained_models/Ya_model_4.joblib"`
+- `"/python/trained_models/Yb_model_20.joblib"`
 
 ## Using the Dashboard
 
