@@ -9,13 +9,13 @@ library(colourpicker)
 library(showtext)
 
 # Load system fonts
-showtext_auto()
+#showtext_auto()
 
 # Specify the font to use, for example "PingFang TC"
-font_add("PingFang", "PingFang.ttc")
+#font_add("PingFang", "PingFang.ttc")
 
 # Apply font
-showtext_opts(dpi = 96)
+#showtext_opts(dpi = 96)
 
 # Use conda environment name to set Python
 use_condaenv("bigdata", required = TRUE)

@@ -12,7 +12,7 @@ library(showtext)
 showtext_auto()
 
 # 指定要使用的字體，例如 "PingFang TC"
-font_add("PingFang", "PingFang.ttc")
+font_add("PingFang", "fonts/PingFang.ttc")
 
 # 應用字體
 showtext_opts(dpi = 96)

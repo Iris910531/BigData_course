@@ -33,13 +33,13 @@ BigData_course/
 │   └── requirements.R
 ├── python/                # Folder containing Python code files.
 │   ├── module.py
-│   └── trained_models/
+│   └── trained_models/.   # Folder containing models which were trained by us already.
 │       ├── Xa_model_24.joblib
 │       ├── Xb_model_20.joblib
 │       ├── Ya_model_4.joblib
 │       └── Yb_model_20.joblib
 ├── environment.yml
-├── report/                # Folder containing the project report in .docx format and .pdf format.
+├── report/                # Folder containing the project report details in .docx format and .pdf format.
 │   ├── group2_Chinese.docx
 │   └── group2_Chinese.pdf
 ├── test_data/             # The data is intended to be used in the demo within the dashboard.
@@ -59,6 +59,8 @@ BigData_course/
 │       ├── gvb000050.txt
 │       ├── gvb000051.txt
 │       └── gvb000052.txt
+├── fonts/                # Folder containing fonts.
+│   ├── PingFang.ttc
 └── README.md              # This file.
 ```
 
@@ -104,6 +106,7 @@ If you encounter error messages in Step 5, please open the file `R/app.R` direct
 - `"/python/trained_models/Xb_model_20.joblib"`
 - `"/python/trained_models/Ya_model_4.joblib"`
 - `"/python/trained_models/Yb_model_20.joblib"`
+- `font_add("PingFang", "/fonts/PingFang.ttc")`
 
 ## Using the Dashboard
 
@@ -119,7 +122,7 @@ If you encounter error messages in Step 5, please open the file `R/app.R` direct
 - The pie chart will show the distribution of different vibration conditions, while the grid plot will provide a detailed view of each file's results.
 
 For further assistance, please contact Mr. Li. Phone: 0912345678 Email: abc@gmail.com
-
+(fake contact information, just for real usage scenarios)
 
 ## Contact Information
 
