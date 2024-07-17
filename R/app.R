@@ -13,6 +13,8 @@ showtext_auto()
 
 # 指定要使用的字體，例如 "PingFang TC"
 font_add("PingFang", "fonts/PingFang.ttc")
+#若是程式出錯，可考慮使用絕對路徑
+#font_add("PingFang", "/path/to/your/fonts/PingFang.ttc")
 
 # 應用字體
 showtext_opts(dpi = 96)
