@@ -41,7 +41,8 @@ BigData_course/
 ├── environment.yml
 ├── report/                # Folder containing the project report details in .docx format and .pdf format.
 │   ├── group2_Chinese.docx
-│   └── group2_Chinese.pdf
+    ├── group2_Chinese.pdf
+│   └── dashboard_demo.mov
 ├── test_data/             # The data is intended to be used in the demo within the dashboard.
 │   ├── Xa/
 │       ├── gvb000002.txt
