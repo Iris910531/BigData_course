@@ -39,8 +39,8 @@ BigData_course/
 │       ├── Ya_model_4.joblib
 │       └── Yb_model_20.joblib
 ├── environment.yml
-├── report/                # Folder containing the project report details in .docx format and .pdf format.
-│   ├── group2_Chinese.docx
+├── report/                # Folder containing the project report details in .pdf format.
+│   ├── group2_presentation_Chinese.pdf
     ├── group2_Chinese.pdf
 │   └── dashboard_demo.mov
 ├── test_data/             # The data is intended to be used in the demo within the dashboard.
