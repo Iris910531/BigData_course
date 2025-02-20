@@ -7,6 +7,11 @@ import joblib
 import re
 
 def compute_fft_for_grouped_data(data):
+
+    '''
+     分別計算每個 FFT 結果的振幅
+    '''
+
     def compute_fft(group):
         fft_result_x = np.fft.fft(group['Xaxis'].values)
         fft_result_y = np.fft.fft(group['Yaxis'].values)
@@ -25,7 +30,7 @@ def compute_fft_for_grouped_data(data):
     fft_results = grouped_data.apply(compute_fft)
     fft_results = fft_results.reset_index(drop=True)
 
-    # 分別計算每個 FFT 結果的振幅並存储
+    
     fft_results['FFTx_Amplitude'] = fft_results['FFTx'].apply(lambda x: np.abs(x) if pd.notnull(x) else np.nan)
     fft_results['FFTy_Amplitude'] = fft_results['FFTy'].apply(lambda x: np.abs(x) if pd.notnull(x) else np.nan)
     fft_results['FFTz_Amplitude'] = fft_results['FFTz'].apply(lambda x: np.abs(x) if pd.notnull(x) else np.nan)
