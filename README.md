@@ -33,6 +33,7 @@ BigData_course/
 │   └── requirements.R
 ├── python/                # Folder containing Python code files.
 │   ├── module.py
+|   ├── Traingdata_code.ipynb
 │   └── trained_models/.   # Folder containing models which were trained by us already.
 │       ├── Xa_model_24.joblib
 │       ├── Xb_model_20.joblib
